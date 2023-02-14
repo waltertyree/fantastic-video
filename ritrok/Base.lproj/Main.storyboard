@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ritrok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FB9-R4-Akw">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lq5-qw-EAG">
+                                        <rect key="frame" x="171.66666666666666" y="724" width="49.666666666666657" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="recordVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ICi-KA-oNV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Lq5-qw-EAG" firstAttribute="centerX" secondItem="FB9-R4-Akw" secondAttribute="centerX" id="BA8-Nb-wbY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lq5-qw-EAG" secondAttribute="bottom" id="Oqx-9u-PXR"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="tpr-EV-0ZH" appends="YES" id="2ka-wO-AIC"/>
+                                    <outletCollection property="gestureRecognizers" destination="beY-ry-QZE" appends="YES" id="PJv-cG-tfS"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like you haven't made any videos yet. Use the button at the bottom of the screen to make a few!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6e-67-0h1">
+                                <rect key="frame" x="32" y="394" width="329" height="64.333333333333314"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="FB9-R4-Akw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0uU-gm-QHn"/>
+                            <constraint firstItem="l6e-67-0h1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Gzv-BY-Z6c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FB9-R4-Akw" secondAttribute="trailing" id="Kr1-7L-VJJ"/>
+                            <constraint firstItem="l6e-67-0h1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QbZ-Se-agZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l6e-67-0h1" secondAttribute="trailing" constant="32" id="Zn5-Q2-LcC"/>
+                            <constraint firstItem="FB9-R4-Akw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qBU-X2-c3Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FB9-R4-Akw" secondAttribute="bottom" id="vNl-zt-cGP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createNewButton" destination="Lq5-qw-EAG" id="fW5-vW-uVC"/>
+                        <outlet property="emptyDirectoryLabel" destination="l6e-67-0h1" id="L5e-yS-4GA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="tpr-EV-0ZH">
+                    <connections>
+                        <action selector="nextVideo:" destination="BYZ-38-t0r" id="HhI-Rw-6MF"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="beY-ry-QZE">
+                    <connections>
+                        <action selector="togglePlayback:" destination="BYZ-38-t0r" id="btq-pT-4bS"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="23.664122137404579" y="-313.38028169014086"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

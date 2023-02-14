@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "imglykit-sp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/imgly/imglykit-sp.git",
+      "state" : {
+        "revision" : "0a3cf488e34d3537f7bc2d4f028ab50f7550a51e",
+        "version" : "11.3.4"
+      }
+    },
+    {
+      "identity" : "vesdk-ios-build",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/imgly/vesdk-ios-build",
+      "state" : {
+        "revision" : "2217fcd0600a54e2cc7c608debbc7e2099d733ff",
+        "version" : "11.3.4"
+      }
+    }
+  ],
+  "version" : 2
+}
